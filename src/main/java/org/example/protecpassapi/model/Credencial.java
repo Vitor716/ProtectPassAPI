@@ -17,6 +17,8 @@ public class Credencial {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String titulo;
+
     private String username;
 
     private String senha;
@@ -28,6 +30,7 @@ public class Credencial {
     private boolean ativo;
 
     public Credencial(DadosCadastroCredencial credencial){
+        this.titulo = credencial.titulo();
         this.username = credencial.username();
         this.senha = credencial.senha();
         this.uri = credencial.uri();

@@ -5,6 +5,8 @@ import org.example.protecpassapi.model.Credencial;
 public record DadosRetornoCredencial (
         Long id,
 
+        String titulo,
+
         String username,
 
         String senha,
@@ -18,6 +20,7 @@ public record DadosRetornoCredencial (
     public DadosRetornoCredencial (Credencial credencial){
         this(
             credencial.getId(),
+            credencial.getTitulo(),
             credencial.getUsername(),
             credencial.getSenha(),
             credencial.getUri(),

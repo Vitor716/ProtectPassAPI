@@ -1,0 +1,2 @@
+ALTER TABLE credenciais
+ADD COLUMN titulo VARCHAR(100)
